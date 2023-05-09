@@ -11,11 +11,12 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+require('dotenv').config()
 
 // app routes
 
-const mongoDb_URI =
-  "mongodb+srv://mydbuser1:ZcM2TPI3m8l3VcmY@cluster0.a7zq8.mongodb.net/parcel_compare?retryWrites=true&w=majority";
+const mongoDb_URI = process.env.MONGODB_URI
+  "";
 
 // import routes
 const providerRoutes = require("./routes/providerRoute");
