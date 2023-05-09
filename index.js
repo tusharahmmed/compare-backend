@@ -15,8 +15,7 @@ require('dotenv').config()
 
 // app routes
 
-const mongoDb_URI = process.env.MONGODB_URI
-  "";
+const mongoDb_URI = process.env.MONGODB_URI;
 
 // import routes
 const providerRoutes = require("./routes/providerRoute");
